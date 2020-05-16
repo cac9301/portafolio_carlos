@@ -1,9 +1,9 @@
-import img_8 from "../examples/img/1.jpg"
+
 import img_2 from "../examples/img/asesorias-caicedo.png"
-import img_4 from "../examples/img/4.jpg"
-import img_5 from "../examples/img/5.jpg"
-import img_6 from "../examples/img/6.jpg"
-import img_7 from "../examples/img/7.jpg"
+import img_4 from "../examples/img/BugMoney.png"
+import img_5 from "../examples/img/bienes.png"
+import img_6 from "../examples/img/canciones.png"
+import img_7 from "../examples/img/noticias.png"
 import img_1 from "../examples/img/PapeleriaLyc.png"
 
 
@@ -22,26 +22,30 @@ export const portafolio =[
         },
         {
             "id" : img_4,
-            "nombre" : "Aplicación Web",
-            "desc" : "Molestias quam iure quia. Magni accusamus, itaque alias ipsa."
+            "nombre" : "Aplicación Web Bugs money",
+            "desc" : "Proyecto creado en la Universidad del valle con el fin de manejar un presupuesto y proyecciones",
+            "url":"http://bugs-money.herokuapp.com/"
         },
         {
             "id" : img_5,
-            "nombre" : "App",
-            "desc" : "Molestias quam iure quia. Magni accusamus, itaque alias ipsa."
+            "nombre" : "App Bienes Rices",
+            "desc" : "aplicacion de bienes raices solo la parte del diseño y front para este",
+            "url":"https://tucasaexclusiva.netlify.app/"
         },
         {
             "id" : img_6,
-            "nombre" : "App",
-            "desc" : "Molestias quam iure quia. Magni accusamus, itaque alias ipsa."
+            "nombre" : "App buscadora de canciones",
+            "desc" : "esta single page aplication funciona con dos apis la cual busca la letra de tu cancion y la informacion de la agrupacion ",
+            "url":"https://tucasaexclusiva.netlify.app/"
         },
         {
             "id" : img_7,
-            "nombre" : "App",
-            "desc" : "Molestias quam iure quia. Magni accusamus, itaque alias ipsa."
+            "nombre" :  "App tu Noticia colombia",
+            "desc" : "esta app funciona con una api la cual trae informacion general y entre otras de la ciudad de colombia esta desarrollada en la universidad del valle .",
+            "url":"https://tucasaexclusiva.netlify.app/"
         },
         {
-            "id" : img_8,
+            "id" : img_1,
             "nombre" : "App",
             "desc" : "Molestias quam iure quia. Magni accusamus, itaque alias ipsa."
         }
