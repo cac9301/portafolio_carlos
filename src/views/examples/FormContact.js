@@ -1,24 +1,44 @@
-import React from 'react';
+import React from "react";
 import {
-    Button,
-    Form,
-    Input,
-    InputGroupAddon,
-    InputGroupText,
-    InputGroup,
-    Container,
-    Row,
-    Col
-  } from "reactstrap";
+  Button,
+  Form,
+  Input,
+  InputGroupAddon,
+  InputGroupText,
+  InputGroup,
+  Container,
+  Row,
+  Col,
+  FormFeedback,
+} from "reactstrap";
+
+import { Formik } from "formik";
+import { schema } from "./schemasvalidation/form-schema-add";
 
 const FormContact = () => {
-    return (
+  return (
+    <Formik
+      validationSchema={schema}
+      onSubmit={(values, { resetForm }) => {
+        console.log(values);
+        // redireccionar
+        resetForm({
+          values: { name: "", email: "",textarea:"" },
+        });
+      }}
+      initialValues={{
+        name: "",
+        email: "",
+        textarea:""
+      }}
+    >
+      {(formik) => (
         <div className="section landing-section">
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
                 <h2 className="text-center">Contactame</h2>
-                <Form className="contact-form">
+                <Form onSubmit={formik.handleSubmit} className="contact-form">
                   <Row>
                     <Col md="6">
                       <label>Name</label>
@@ -28,10 +48,20 @@ const FormContact = () => {
                             <i className="nc-icon nc-single-02" />
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input 
-                        placeholder="Name" 
-                        type="text" 
+                        <Input
+                          type="text"
+                          placeholder="Nombre Cliente"
+                          name="name"
+                          valid={formik.touched.name && !formik.errors.name}
+                          invalid={
+                            !!(formik.touched.name && formik.errors.name)
+                          }
+                          {...formik.getFieldProps("name")}
                         />
+                        <FormFeedback valid>
+                          Bien! es un buen nombre
+                        </FormFeedback>
+                        <FormFeedback>{formik.errors.name}</FormFeedback>
                       </InputGroup>
                     </Col>
                     <Col md="6">
@@ -42,20 +72,50 @@ const FormContact = () => {
                             <i className="nc-icon nc-email-85" />
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input placeholder="Email" type="text" />
+                        <Input
+                          type="email"
+                          placeholder="correo@corre.com"
+                          name="email"
+                          valid={formik.touched.email && !formik.errors.email}
+                          invalid={
+                            !!(formik.touched.email && formik.errors.email)
+                          }
+                          {...formik.getFieldProps("email")}
+                        />
+                        <FormFeedback valid>
+                          Bien! eso si es un correo 
+                        </FormFeedback>
+                        <FormFeedback>{formik.errors.email}</FormFeedback>
                       </InputGroup>
                     </Col>
                   </Row>
                   <label>Message</label>
                   <Input
-                    placeholder="Tell us your thoughts and feelings..."
                     type="textarea"
                     rows="4"
+                    placeholder="hola carlos me gustaria contactarte para el desarrollo de mi Tienda Virtaul"
+                    name="textarea"
+                    valid={formik.touched.textarea && !formik.errors.textarea}
+                    invalid={
+                      !!(formik.touched.textarea && formik.errors.textarea)
+                    }
+                    {...formik.getFieldProps("textarea")}
                   />
+                  <FormFeedback valid>
+                    buena inquetud
+                  </FormFeedback>
+                  <FormFeedback>{formik.errors.textarea}</FormFeedback>
                   <Row>
                     <Col className="ml-auto mr-auto" md="4">
-                      <Button className="btn-fill" color="danger" size="lg">
-                        Send Message
+                      <Button className="btn-fill d-block w-100 " color="primary" size="md ">
+                        Enviar Al Correo
+                      </Button>
+                    </Col>
+                    <Col className="ml-auto mr-auto" md="4">
+                      <Button className="btn-fill d-block w-100 " color="success" size="md">
+                          whatsapp     
+                        <i style={{fontSize:"1.2rem",
+                      marginLeft:"0 rem "}}className="fa fa-whatsapp" aria-hidden="true"></i>
                       </Button>
                     </Col>
                   </Row>
@@ -64,7 +124,9 @@ const FormContact = () => {
             </Row>
           </Container>
         </div>
-    );
+      )}
+    </Formik>
+  );
 };
 
 export default FormContact;

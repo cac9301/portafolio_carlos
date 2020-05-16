@@ -25,7 +25,7 @@ function DemoFooter() {
                   href="https://api.whatsapp.com/send?phone=+573017657101"
                   target="_blank"
                 >
-                 <i style={{fontSize: "1rem"}}class="fa fa-whatsapp" aria-hidden="true"></i> Whtasapp
+                 <i style={{fontSize: "1rem"}}className="fa fa-whatsapp" aria-hidden="true"></i> Whtasapp
                 </a>
               </li>
               <li>
