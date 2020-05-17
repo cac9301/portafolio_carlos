@@ -14,14 +14,22 @@ import {
 
 import { Formik } from "formik";
 import { schema } from "./schemasvalidation/form-schema-add";
+import {useHistory} from "react-router-dom";
 
 const FormContact = () => {
+  
+  const history = useHistory();  
+  const enviar_Whats_Mensaje =(values)=> {
+    const {name,email,textarea}=values
+    history.push(`https://api.whatsapp.com/send?phone=+573017657101&text=Nombre:%20%0A%0A${name}%correo:%20%0A${email}%0A%0AMensaje:%20%0A${textarea}%0A`)
+  }
   return (
     <Formik
       validationSchema={schema}
       onSubmit={(values, { resetForm }) => {
         console.log(values);
         // redireccionar
+        enviar_Whats_Mensaje(values);
         resetForm({
           values: { name: "", email: "",textarea:"" },
         });
