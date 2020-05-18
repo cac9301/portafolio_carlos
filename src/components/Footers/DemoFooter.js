@@ -32,7 +32,8 @@ function DemoFooter() {
                 <a
                   target="_blank"
                 >
-                  Licenses
+                  <i style={{fontSize: "1rem"}} className="fa fa-envelope-o" aria-hidden="true"></i>    correo:cac9301@gmail.com
+              
                 </a>
               </li>
             </ul>

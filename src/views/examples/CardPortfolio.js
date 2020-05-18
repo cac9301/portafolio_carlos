@@ -11,17 +11,17 @@ import { portafolio } from "./datos";
 
 
 const Example = (props) => {
-    console.log(portafolio);
-    
   return (
     <div className="card-columns">
       {portafolio.map(portafolio=>(
         //eslint-disable-next-line
-      <Card>
+      <Card
+      key={portafolio.id}
+      >
         <CardImg
           top
           width="100%"
-          src={portafolio.id}
+          src={portafolio.img}
           alt="Card image cap"
         />
         <CardBody>

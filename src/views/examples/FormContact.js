@@ -14,30 +14,39 @@ import {
 
 import { Formik } from "formik";
 import { schema } from "./schemasvalidation/form-schema-add";
-import {useHistory} from "react-router-dom";
+import Swal from "sweetalert2";
 
 const FormContact = () => {
   
-  const history = useHistory();  
-  const enviar_Whats_Mensaje =(values)=> {
-    const {name,email,textarea}=values
-    history.push(`https://api.whatsapp.com/send?phone=+573017657101&text=Nombre:%20%0A%0A${name}%correo:%20%0A${email}%0A%0AMensaje:%20%0A${textarea}%0A`)
-  }
+  const enviarCorreo = () => {
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Mensaje guarduado & enviado al correo",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
+
+  const enviar_Whats_Mensaje = (values) => {
+    const { name, email, textarea } = values;
+    const url = `https://api.whatsapp.com/send?phone=+573017657101&text=Nombre:%20%0A${name}%0A%20correo:%20%0A${email}%0A%20Mensaje:%20%0A${textarea}%0A%20`;
+    window.open(url, "Escribeme", "width=300, height=200");
+  };
   return (
     <Formik
       validationSchema={schema}
       onSubmit={(values, { resetForm }) => {
-        console.log(values);
-        // redireccionar
         enviar_Whats_Mensaje(values);
+        // redireccionar
         resetForm({
-          values: { name: "", email: "",textarea:"" },
+          values: { name: "", email: "", textarea: "" },
         });
       }}
       initialValues={{
-        name: "",
-        email: "",
-        textarea:""
+        name: "carlos",
+        email: "cac9301@gmail.com",
+        textarea: "carlos",
       }}
     >
       {(formik) => (
@@ -91,7 +100,7 @@ const FormContact = () => {
                           {...formik.getFieldProps("email")}
                         />
                         <FormFeedback valid>
-                          Bien! eso si es un correo 
+                          Bien! eso si es un correo
                         </FormFeedback>
                         <FormFeedback>{formik.errors.email}</FormFeedback>
                       </InputGroup>
@@ -109,21 +118,31 @@ const FormContact = () => {
                     }
                     {...formik.getFieldProps("textarea")}
                   />
-                  <FormFeedback valid>
-                    buena inquetud
-                  </FormFeedback>
+                  <FormFeedback valid>buena inquetud</FormFeedback>
                   <FormFeedback>{formik.errors.textarea}</FormFeedback>
                   <Row>
                     <Col className="ml-auto mr-auto" md="4">
-                      <Button className="btn-fill d-block w-100 " color="primary" size="md ">
+                      <Button
+                        onClick={() => enviarCorreo()}
+                        className="btn-fill d-block w-100 "
+                        color="primary"
+                        size="md "
+                      >
                         Enviar Al Correo
                       </Button>
                     </Col>
                     <Col className="ml-auto mr-auto" md="4">
-                      <Button className="btn-fill d-block w-100 " color="success" size="md">
-                          whatsapp     
-                        <i style={{fontSize:"1.2rem",
-                      marginLeft:"0 rem "}}className="fa fa-whatsapp" aria-hidden="true"></i>
+                      <Button
+                        className="btn-fill d-block w-100 "
+                        color="success"
+                        size="md"
+                      >
+                         whatsapp
+                        <i
+                          style={{ fontSize: "1.2rem", marginLeft: "0 rem " }}
+                          className="fa fa-whatsapp"
+                          aria-hidden="true"
+                        ></i>
                       </Button>
                     </Col>
                   </Row>

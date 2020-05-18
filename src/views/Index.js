@@ -18,8 +18,8 @@ function Index() {
   });
   return (
     <>
-      <IndexNavbar/>
-      <IndexHeader/>
+      <IndexNavbar />
+      <IndexHeader />
       <div className="main">
         <ProfilePage />
         <DemoFooter />

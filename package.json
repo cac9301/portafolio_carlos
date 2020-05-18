@@ -20,6 +20,7 @@
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.0.1",
         "reactstrap": "8.0.0",
+        "sweetalert2": "^9.10.13",
         "yup": "^0.28.5"
     },
     "scripts": {
