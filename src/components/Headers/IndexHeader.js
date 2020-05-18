@@ -22,7 +22,7 @@ function IndexHeader() {
               <h1 className="presentation-title">Desarrollo Web React</h1>
             </div>
             <h2 className="presentation-subtitle text-center">
-              Make your mark with a Free Bootstrap 4 (Reactstrap) UI Kit!
+            Haz tu propia Marca con Bootstrap 4 (Reactstrap) UI Kit & otros Framework CSS!
             </h2>
           </Container>
         </div>

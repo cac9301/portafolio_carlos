@@ -44,9 +44,9 @@ const FormContact = () => {
         });
       }}
       initialValues={{
-        name: "carlos",
-        email: "cac9301@gmail.com",
-        textarea: "carlos",
+        name: "",
+        email: "",
+        textarea: "",
       }}
     >
       {(formik) => (

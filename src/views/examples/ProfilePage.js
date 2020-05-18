@@ -51,7 +51,7 @@ function ProfilePage() {
               </p>
               <br />
             </Col>
-            <Col className="ml-auto mr-auto text-justify" md="6">
+            <Col className="ml-auto mr-auto text-justify d-none d-md-block" md="6">
               <p>
                 Junior Fullstack Software Developer, graduated from the
                 Universidad del Valle as an information systems technologist,
