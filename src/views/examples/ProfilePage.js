@@ -173,10 +173,11 @@ function ProfilePage() {
                         fontWeight: "bold",
                         color: "#ffff",
                       }}
-                      className="text-uppercase"
+                      className="text-uppercase d-none d-md-block"
                     >
                       Tecnologías utilizadas en MERN
                     </h1>
+
                   </Col>
                   <Col className="ml-auto mr-auto text-justify" md="6">
                     <Stack />
