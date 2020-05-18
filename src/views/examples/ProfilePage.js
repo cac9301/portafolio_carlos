@@ -113,7 +113,7 @@ function ProfilePage() {
               <p>
               La barrera de comprar online ya se rompió y Tú lo sabes. Vendes Online o Mueres Offline. Tu E-commerce profesional, Personaliza, Automatiza y optimiza.
               </p>
-              <ListGroup>
+              <ListGroup >
                 <ListGroupItem>Pasarela de Pagos</ListGroupItem>
                 <ListGroupItem>Carrito de Compras</ListGroupItem>
                 <ListGroupItem>Seguridad en tus transacciones</ListGroupItem>
