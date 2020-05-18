@@ -110,7 +110,7 @@ const FormContact = () => {
                   <Input
                     type="textarea"
                     rows="4"
-                    placeholder="hola carlos me gustaria contactarte para el desarrollo de mi Tienda Virtaul"
+                    placeholder="hola carlos me gustaria contactarte para el desarrollo de mi Tienda Virtual"
                     name="textarea"
                     valid={formik.touched.textarea && !formik.errors.textarea}
                     invalid={
