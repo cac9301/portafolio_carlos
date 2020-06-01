@@ -67,7 +67,7 @@ const FormContact = () => {
                         </InputGroupAddon>
                         <Input
                           type="text"
-                          placeholder="Nombre Cliente"
+                          placeholder="Nombre"
                           name="name"
                           valid={formik.touched.name && !formik.errors.name}
                           invalid={
@@ -91,7 +91,7 @@ const FormContact = () => {
                         </InputGroupAddon>
                         <Input
                           type="email"
-                          placeholder="correo@corre.com"
+                          placeholder="correo@correo.com"
                           name="email"
                           valid={formik.touched.email && !formik.errors.email}
                           invalid={
@@ -110,7 +110,7 @@ const FormContact = () => {
                   <Input
                     type="textarea"
                     rows="4"
-                    placeholder="hola carlos me gustaria contactarte para el desarrollo de mi Tienda Virtual"
+                    placeholder="Hola Carlos me gustaria contactarte para el desarrollo de mi Tienda Virtual"
                     name="textarea"
                     valid={formik.touched.textarea && !formik.errors.textarea}
                     invalid={

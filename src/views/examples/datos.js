@@ -5,6 +5,7 @@ import img_5 from "../examples/img/bienes.png"
 import img_6 from "../examples/img/canciones.png"
 import img_7 from "../examples/img/noticias.png"
 import img_1 from "../examples/img/PapeleriaLyc.png"
+import img_8 from "../examples/img/tienda-eccomerce.png"
 
 
 export const portafolio =[
@@ -13,7 +14,7 @@ export const portafolio =[
             "id":1,
             "img" : img_1,
             "nombre" : "Sitio Web Papeleria L&C",
-            "desc" : "Realizacion de la paguina web para la distribuidora y papeleria l&C, con expancion a E-commerse",
+            "desc" : "Realizacion de la pagina web para la distribuidora y papeleria l&C, con expansion a E-commerse",
             "url":"https://papeleralyc.000webhostapp.com/"
         },
         {
@@ -50,6 +51,13 @@ export const portafolio =[
             "nombre" :  "App tu Noticia colombia",
             "desc" : "esta app funciona con una api la cual trae informacion general y entre otras de la ciudad de colombia esta desarrollada en la universidad del valle .",
             "url":"https://enteratecolombia.netlify.app/"
+        },
+        {
+            "id":7,
+            "img" : img_8,
+            "nombre" : "Ecommerce-mubles",
+            "desc" : "Realizacion de todo el stack de la tienda desplegada en heroku",
+            "url":"https://tutienda.netlify.app/"
         },
 
 ]

@@ -46,8 +46,7 @@ function ProfilePage() {
                 enfasis educativos pero aplicados a la vida real. En proyectos
                 personales he desarrollado en, reactjs, nodejs, bases de datos
                 SQL y no SQL .En constante aprendizaje de nuevas tecnologias. No
-                siendo mas agradezco el tiempo que dedicaste para leer sobre mi
-                y acerca de quien soy.
+                siendo mas, agradezco el tiempo que dedicaste para leer sobre mi
               </p>
               <br />
             </Col>
@@ -130,7 +129,7 @@ function ProfilePage() {
         {/**stack de desarrollo */}
         <Row>
           <Col className="ml-auto mr-auto text-center mb-5" md="12">
-            <h2 className="text-center text-uppercase">stcak de desarrollo</h2>
+            <h2 className="text-center text-uppercase">stack de desarrollo</h2>
           </Col>
           <Container className="mb-5">
             <Row>
